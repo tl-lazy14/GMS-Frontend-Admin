@@ -1,0 +1,99 @@
+.quill {
+  background-color: white;
+  width: 100%;
+}
+.quill .ql-editor {
+  height: 250px;
+  font-size: 17px;
+  font-family: "Outfit Variable", sans-serif;
+}
+.quill-article .ql-editor {
+  height: 400px;
+}
+.quill-info .ql-editor {
+  height: 250px;
+}
+.quill .ql-editor h1,
+.quill .ql-editor h2,
+.quill .ql-editor p,
+.quill .ql-editor li {
+  margin-bottom: 15px;
+}
+.quill-content li {
+  margin-bottom: 15px;
+}
+.quill img {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.quill-content img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.quill iframe {
+  height: 400px;
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.quill-content iframe {
+  height: 400px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.quill iframe.ql-video + p,
+.quill-content iframe.ql-video + p {
+  display: none;
+}
+.quill-content p,
+.quill-content li {
+  font-size: 19px;
+}
+.quill-content .ql-size-small {
+  font-size: 16px;
+}
+.quill-content .ql-size-large {
+  font-size: 30px;
+}
+.quill-content .ql-size-huge {
+  font-size: 47px;
+}
+.quill-content h1 {
+  font-size: 40px;
+}
+.quill-content h2 {
+  font-size: 30px;
+}
+/* Header + fontSize small */
+.quill-content h1 span.ql-size-small {
+  font-size: 31px;
+}
+.quill-content h2 span.ql-size-small {
+  font-size: 22px;
+}
+/* Header + fontSize large */
+.quill-content h1 span.ql-size-large {
+  font-size: 58px;
+}
+.quill-content h2 span.ql-size-large {
+  font-size: 45px;
+}
+/* Header + fontSize huge */
+.quill-content h1 span.ql-size-huge {
+  font-size: 90px;
+}
+.quill-content h2 span.ql-size-huge {
+  font-size: 75px;
+}
