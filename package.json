@@ -41,9 +41,9 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "ignoreDuringBuilds": true
   },
-  "eslintIgnore": ["**/*.js"],
   "browserslist": {
     "production": [
       ">0.2%",
