@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { UserContext } from "./userContext";
 
 const api = axios.create({
-  baseURL: "http://localhost:2002/gms/api/v1",
+  baseURL: "https://eagle-fits.onrender.com/gms/api/v1",
   withCredentials: true,
 });
 

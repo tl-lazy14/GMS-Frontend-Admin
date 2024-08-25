@@ -152,7 +152,7 @@ const WebContentPage = () => {
   const getImageSlider = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:2002/gms/api/v1/brand/get-image-slider"
+        "https://eagle-fits.onrender.com/gms/api/v1/brand/get-image-slider"
       );
       const imageSliderResponse = JSON.parse(response.data.imageSlider);
       setImageSlider(imageSliderResponse);
@@ -173,7 +173,7 @@ const WebContentPage = () => {
   const getListGeneralInfoPage = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:2002/gms/api/v1/content-website/get-list-general-info",
+        "https://eagle-fits.onrender.com/gms/api/v1/content-website/get-list-general-info",
         {
           params: {
             page: selectedPage,

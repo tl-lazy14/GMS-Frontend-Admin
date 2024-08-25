@@ -101,7 +101,7 @@ const CreateExercisePage = () => {
 
   const getListCategory = async () => {
     try {
-      const response = await axios.get(`http://localhost:2002/gms/api/v1/exercise/get-list-category`);
+      const response = await axios.get(`https://eagle-fits.onrender.com/gms/api/v1/exercise/get-list-category`);
       setListCategories(response.data);
     } catch (err) {
       console.log(err);

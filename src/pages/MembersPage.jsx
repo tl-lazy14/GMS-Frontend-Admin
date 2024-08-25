@@ -137,7 +137,7 @@ const MembersPage = () => {
   const getListGyms = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:2002/gms/api/v1/gym/get-list-active-gym"
+        "https://eagle-fits.onrender.com/gms/api/v1/gym/get-list-active-gym"
       );
       setListGyms(response.data);
       if (user.role === "SENIOR_ADMIN") setSelectedGym(response.data[0]);

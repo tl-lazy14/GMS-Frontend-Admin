@@ -93,7 +93,7 @@ const ResultDetailsPage = () => {
   const getData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:2002/gms/api/v1/customer/get-training-result/${id}`
+        `https://eagle-fits.onrender.com/gms/api/v1/customer/get-training-result/${id}`
       );
       setData(response.data);
     } catch (err) {

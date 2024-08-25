@@ -151,7 +151,7 @@ const EditArticlePage = () => {
 
   const getArticle = async () => {
     try {
-      const response = await axios.get(`http://localhost:2002/gms/api/v1/article/get-article/${id}`);
+      const response = await axios.get(`https://eagle-fits.onrender.com/gms/api/v1/article/get-article/${id}`);
       setFormData((prevFormData) => ({
         ...prevFormData,
         title: response.data.title,

@@ -89,7 +89,7 @@ const CoachDetailPage = () => {
 
   const getCoachInfo = async () => {
     try {
-      const response = await axios.get(`http://localhost:2002/gms/api/v1/coach/get-coach-info/${id}`);
+      const response = await axios.get(`https://eagle-fits.onrender.com/gms/api/v1/coach/get-coach-info/${id}`);
       setData(response.data);
     } catch (err) {
       console.log(err);

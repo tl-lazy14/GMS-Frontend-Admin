@@ -144,7 +144,7 @@ const ResetPassword = ({
 
     try {
       // eslint-disable-next-line no-unused-vars
-      await axios.put("http://localhost:2002/gms/api/v1/auth/reset-password", {
+      await axios.put("https://eagle-fits.onrender.com/gms/api/v1/auth/reset-password", {
         email: email,
         newPassword: formData.newPassword,
       });

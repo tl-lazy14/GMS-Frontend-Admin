@@ -134,7 +134,7 @@ const MembershipPage = () => {
   const getListBenefit = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:2002/gms/api/v1/service/get-all-benefit"
+        "https://eagle-fits.onrender.com/gms/api/v1/service/get-all-benefit"
       );
       setDataBenefits(response.data);
     } catch (err) {

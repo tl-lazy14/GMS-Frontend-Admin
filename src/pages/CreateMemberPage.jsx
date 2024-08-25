@@ -146,7 +146,7 @@ const CreateMemberPage = () => {
   const getGym = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:2002/gms/api/v1/gym/get-gym/${id}`
+        `https://eagle-fits.onrender.com/gms/api/v1/gym/get-gym/${id}`
       );
       setGym(response.data);
     } catch (err) {
@@ -157,7 +157,7 @@ const CreateMemberPage = () => {
   const getListMembershipPackage = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:2002/gms/api/v1/service/get-active-membership-package"
+        "https://eagle-fits.onrender.com/gms/api/v1/service/get-active-membership-package"
       );
       setListPackages(response.data);
     } catch (err) {
@@ -323,7 +323,7 @@ const CreateMemberPage = () => {
     try {
       setOpenDialog(false);
       setIsButtonDisabled(true);
-      await axios.post("http://localhost:2002/gms/api/v1/customer/add-member", {
+      await axios.post("https://eagle-fits.onrender.com/gms/api/v1/customer/add-member", {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,

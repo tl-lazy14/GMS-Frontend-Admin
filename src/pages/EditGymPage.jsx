@@ -181,7 +181,7 @@ const EditGymPage = () => {
   const getGymInfo = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:2002/gms/api/v1/gym/get-gym/${id}`
+        `https://eagle-fits.onrender.com/gms/api/v1/gym/get-gym/${id}`
       );
 
       const gyms = {

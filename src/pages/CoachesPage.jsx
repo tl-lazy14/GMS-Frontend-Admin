@@ -129,7 +129,7 @@ const CoachesPage = () => {
   const getListGyms = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:2002/gms/api/v1/gym/get-list-active-gym"
+        "https://eagle-fits.onrender.com/gms/api/v1/gym/get-list-active-gym"
       );
       setListGyms(response.data);
     } catch (err) {
@@ -143,7 +143,7 @@ const CoachesPage = () => {
 
   const getListCoach = async () => {
     try {
-      const response = await axios.get("http://localhost:2002/gms/api/v1/coach/get-list-coach", {
+      const response = await axios.get("https://eagle-fits.onrender.com/gms/api/v1/coach/get-list-coach", {
         params: {
           level: level,
           status: status,

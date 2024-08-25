@@ -114,7 +114,7 @@ const LoginContainer = ({ setContainer, setOpenAlert, setTypeAlert, setContentAl
 
     if (passwordError === "" && emailError === "") {
       try {
-        const response = await axios.post(`http://localhost:2002/gms/api/v1/auth/login`, { 
+        const response = await axios.post(`https://eagle-fits.onrender.com/gms/api/v1/auth/login`, { 
             email: formData.email,
             password: formData.password, 
         });
@@ -124,6 +124,7 @@ const LoginContainer = ({ setContainer, setOpenAlert, setTypeAlert, setContentAl
         login(user.user);
         document.cookie = `accessToken=${user.accessToken}`;
         document.cookie = `refreshToken=${user.refreshToken}`;
+        console.log(user.accessToken);
         navigate('/dashboard');
     } catch (err) {
         setOpenAlert(true);

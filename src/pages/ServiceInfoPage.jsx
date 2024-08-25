@@ -90,7 +90,7 @@ const ServiceInfoPage = () => {
   const getListServiceInfo = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:2002/gms/api/v1/content-website/get-list-general-info",
+        "https://eagle-fits.onrender.com/gms/api/v1/content-website/get-list-general-info",
         {
           params: {
             page: "Service Page",

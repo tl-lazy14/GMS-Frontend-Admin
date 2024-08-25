@@ -102,7 +102,7 @@ const ClassesPage = () => {
   const getListGyms = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:2002/gms/api/v1/gym/get-list-active-gym"
+        "https://eagle-fits.onrender.com/gms/api/v1/gym/get-list-active-gym"
       );
       setListGyms(response.data);
     } catch (err) {
@@ -113,7 +113,7 @@ const ClassesPage = () => {
   const getListCoach = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:2002/gms/api/v1/coach/get-list-coach-with-schedule/${selectedGym.id}`
+        `https://eagle-fits.onrender.com/gms/api/v1/coach/get-list-coach-with-schedule/${selectedGym.id}`
       );
       setListCoaches(response.data);
       console.log("sdgsdgdsg");
@@ -125,7 +125,7 @@ const ClassesPage = () => {
   const getListCategory = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:2002/gms/api/v1/class/get-list-category"
+        "https://eagle-fits.onrender.com/gms/api/v1/class/get-list-category"
       );
       setListCategories(response.data);
     } catch (err) {
@@ -135,7 +135,7 @@ const ClassesPage = () => {
 
   const getListClass = async () => {
     try {
-      const response = await axios.get("http://localhost:2002/gms/api/v1/class/get-list-class", {
+      const response = await axios.get("https://eagle-fits.onrender.com/gms/api/v1/class/get-list-class", {
         params: {
           gymId: selectedGym.id,
           categoryId: selectedCategory,

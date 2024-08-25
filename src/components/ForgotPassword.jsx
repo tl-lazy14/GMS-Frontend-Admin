@@ -132,7 +132,7 @@ const ForgotPassword = ({
     if (emailError === "") {
       try {
         await axios.post(
-          "http://localhost:2002/gms/api/v1/auth/forgot-password",
+          "https://eagle-fits.onrender.com/gms/api/v1/auth/forgot-password",
           { email: formData.email }
         );
         setEmailForReset(formData.email);
@@ -158,7 +158,7 @@ const ForgotPassword = ({
     if (codeError === "") {
       try {
         // eslint-disable-next-line no-unused-vars
-        const response = await axios.post("http://localhost:2002/gms/api/v1/auth/verify-code", {
+        const response = await axios.post("https://eagle-fits.onrender.com/gms/api/v1/auth/verify-code", {
           email: formData.email,
           code: formData.code,
         });

@@ -68,7 +68,7 @@ const BrandInfoPage = () => {
 
   const getBrandInfo = async () => {
     try {
-      const response = await axios.get("http://localhost:2002/gms/api/v1/brand/get-brand-info");
+      const response = await axios.get("https://eagle-fits.onrender.com/gms/api/v1/brand/get-brand-info");
       setData({
         brandLogo: response.data.logo,
         brandName: response.data.nameBrand,

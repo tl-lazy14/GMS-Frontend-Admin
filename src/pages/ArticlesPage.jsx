@@ -138,7 +138,7 @@ const ArticlesPage = () => {
 
   const getListArticles = async () => {
     try {
-      const response = await axios.get(`http://localhost:2002/gms/api/v1/article/get-list-article`, {
+      const response = await axios.get(`https://eagle-fits.onrender.com/gms/api/v1/article/get-list-article`, {
         params: {
           category: category,
           status: status,

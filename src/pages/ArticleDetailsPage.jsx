@@ -60,7 +60,7 @@ const ArticleDetailsPage = () => {
 
   const getArticle = async () => {
     try {
-      const response = await axios.get(`http://localhost:2002/gms/api/v1/article/get-article/${id}`);
+      const response = await axios.get(`https://eagle-fits.onrender.com/gms/api/v1/article/get-article/${id}`);
       const articleInfo = response.data;
       setArticleData({
         ...articleInfo,
@@ -73,7 +73,7 @@ const ArticleDetailsPage = () => {
 
   const addView = async () => {
     try {
-      await axios.put(`http://localhost:2002/gms/api/v1/article/add-view/${id}`);
+      await axios.put(`https://eagle-fits.onrender.com/gms/api/v1/article/add-view/${id}`);
     } catch (err) {
       console.log(err);
     }

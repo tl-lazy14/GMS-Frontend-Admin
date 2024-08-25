@@ -125,7 +125,7 @@ const ResultsPage = () => {
   const getListResults = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:2002/gms/api/v1/customer/get-list-result`,
+        `https://eagle-fits.onrender.com/gms/api/v1/customer/get-list-result`,
         {
           params: {
             gymId: user.role === "GYM_MANAGER" ? user.gym.id : "all",
