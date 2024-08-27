@@ -11,7 +11,7 @@ export const UserProvider = ({ children }) => {
 
   const fetchUserInfo = async () => {
     try {
-      const response = await api.get('/user/info', { withCredentials: true });
+      const response = await api.get('/user/info');
       setUser(response.data);
     } catch (error) {
       console.error('Error fetching user data:', error);
@@ -36,8 +36,6 @@ export const UserProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     localStorage.removeItem('isLoggedIn');
-    document.cookie = "accessToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    document.cookie = "refreshToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   };
 
   if (loading) {

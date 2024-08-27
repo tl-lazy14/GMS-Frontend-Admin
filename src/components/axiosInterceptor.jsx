@@ -17,9 +17,8 @@ api.interceptors.response.use(
       originalRequest._retry = true;
 
       try {
-        const response = await api.post("/auth/refresh", { withCredentials: true });
+        const response = await api.post("/auth/refresh");
         const { newAccessToken } = response.data;
-        document.cookie = `accessToken=${newAccessToken}; Path=/;`;
         return api(originalRequest);
       } catch (err) {
         console.error("Refresh token failed", err);
@@ -29,7 +28,7 @@ api.interceptors.response.use(
 
         const handleLogout = async () => {
           try {
-            await api.post(`/auth/logout`, user.id, { withCredentials: true });
+            await api.post(`/auth/logout`, user.id);
             logout();
             navigate("/login");
           } catch (error) {

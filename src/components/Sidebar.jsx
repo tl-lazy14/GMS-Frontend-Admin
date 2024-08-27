@@ -77,7 +77,7 @@ const Sidebar = ({ setPageName }) => {
   const { user, logout } = useContext(UserContext);
 
   const handleConfirmLogout = async () => {
-    await api.post("/auth/logout", user.id, { withCredentials: true });
+    await api.post("/auth/logout", user.id);
     logout();
     navigate("/login");
   };

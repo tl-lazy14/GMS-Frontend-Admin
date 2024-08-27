@@ -122,8 +122,6 @@ const LoginContainer = ({ setContainer, setOpenAlert, setTypeAlert, setContentAl
         localStorage.setItem('hasJustLoggedIn', 'true');
         localStorage.setItem('isLoggedIn', 'true');
         login(user.user);
-        document.cookie = `accessToken=${user.accessToken}`;
-        document.cookie = `refreshToken=${user.refreshToken}`;
         console.log(user.accessToken);
         navigate('/dashboard');
     } catch (err) {

@@ -170,7 +170,7 @@ const ChangePassword = () => {
       // Log out, quay ve trang dang nhap
       setTimeout(async () => {
         try {
-          await api.post(`/auth/logout`, user.id, { withCredentials: true });
+          await api.post(`/auth/logout`, user.id);
           logout();
           navigate("/login");
         } catch (error) {
