@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import api from './axiosInterceptor';
 import { useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 export const UserContext = createContext();
 
@@ -11,11 +12,11 @@ export const UserProvider = ({ children }) => {
 
   const fetchUserInfo = async () => {
     try {
-      const response = await api.get('/user/info');
+      const response = await axios.get('https://eagle-fits.onrender.com/gms/api/v1/user/info', { withCredentials: true });
       setUser(response.data);
     } catch (error) {
       console.error('Error fetching user data:', error);
-      logout();
+      
     } finally {
       setLoading(false);
     }
